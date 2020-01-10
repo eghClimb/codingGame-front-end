@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="panel panel-default">
+    <div class="panel-heading">Editing a movie</div>
+    <div class="panel-body" *ngIf="movieToEdit">
+      <form #f="ngForm" (ngSubmit)="onUpdateMovie(f.value)">
+        <div class="form-group">
+          <label class="control-label">Title</label><p></p><p></p>
+          <label class="control-label" >{{movieToEdit.title}}</label>
+          <input class="form-control" type="hidden" name="title" ngModel [(ngModel)] ="movieToEdit.title">
+<!--          <input class="form-control" type="text" name="title" ngModel [(ngModel)] ="movieToEdit.title">-->
+        </div>
+        <div class="form-group">
+          <label class="control-label">Director</label>
+          <input class="form-control" type="text" name="director" ngModel [(ngModel)] ="movieToEdit.director">
+        </div>
+        <div class="form-group">
+          <label class="control-label">ReleaseDate</label>
+          <input class="form-control" type="text" name="releaseDate" ngModel [(ngModel)] ="movieToEdit.releaseDate">
+        </div>
+        <div class="form-group">
+          <label class="control-label">Type</label>
+          <input class="form-control" type="text" name="type" ngModel [(ngModel)] ="movieToEdit.type">
+        </div>
+        <button class="btn btn-success" type="submit">Update</button>
+      </form>
+    </div>
+  </div>
+</div>

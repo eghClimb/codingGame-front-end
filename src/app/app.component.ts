@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import {MovieService} from './services/movie.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'codingGame-front-web';
+  constructor( private  router:Router) {
+    this.router.navigateByUrl("/home");
+  }
 }

@@ -1,0 +1,31 @@
+<div class="container">
+<div class="col-md-6 col-sm-6 col-xs-6" >
+<div class="panel panel-default">
+  <div class="panel-heading">New Movie</div>
+  <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="onSaveMovie(f.value)">
+        <div class="form-group">
+          <label class="control-label">Title</label>
+          <input class="form-control" type="text" name="title" ngModel>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Director</label>
+          <input class="form-control" type="text" name="director" ngModel>
+        </div>
+        <div class="form-group">
+          <label class="control-label">ReleaseDate</label>
+          <input class="form-control" type="text" name="releaseDate" ngModel>
+        </div>
+        <div class="form-group">
+          <label class="control-label">Type</label>
+          <input class="form-control" type="text" name="type" ngModel>
+        </div>
+
+        <button class="btn btn-success" type="submit">Save</button>
+      </form>
+    </div>
+
+  </div>
+
+</div>
+</div>
